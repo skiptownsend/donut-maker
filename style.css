@@ -1,0 +1,137 @@
+/* * {
+  margin: 0px;
+  padding: 0px;
+  font-size: 18px;
+} */
+
+h1 {
+  color: #6838d4;
+  font-size: 60px;
+}
+
+body {
+  font-family: Fredoka One, sans-serif;
+  background: #fde893;
+  text-align: center;
+}
+
+.container {
+  margin-right: 30fr;
+  margin-left: 30fr;
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: 1fr 700px, 500px, 1fr;
+  
+  grid-template-areas:  
+    "left header header right"
+    "left navbar navbar right"
+    "left donut-clicker auto-clicker right"
+    "left donut-clicker owned-clickers right"
+    "left donut-clicker buy-clicker right"
+    "left donut-clicker  next-clicker right"
+    "left donut-clicker multiplier right"
+    "left donut-clicker owned-multis right"
+    "left donut-counter buy-multi right"
+    "left donuts-per-click next-multi right"
+    "left footer footer right"
+}
+
+.header {
+  grid-area: header;
+  border: 2px #000;
+}
+
+.navbar {
+  grid-area: navbar;
+  padding: 20px 50px;
+}
+
+.modal-container {
+  background-color: #fde893;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  opacity: 0;
+  pointer-events: none;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  transition: opacity 0.3s ease;
+}
+
+.modal-container.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal {
+  background-color: #fff;
+  padding: 20px 30px;
+  border-radius: 10px;
+  color: #000;
+  width: 600px;
+  max-width: 100%;
+}
+#close {
+  padding: 5px 5px;
+  border-radius: 5px;
+  font-size: 15px;
+}
+
+.donutClicker {
+  grid-area: donut-clicker;
+}
+
+#chocoB {
+  min-width: 50px;
+  max-width: 400px; 
+}
+
+.donutcount {
+  grid-area: donut-counter;
+}
+
+.donutsPerClick {
+  grid-area: donuts-per-click;
+}
+
+.autoClicker {
+  grid-area: auto-clicker;
+}
+
+.ownedClickers {
+  grid-area: owned-clickers;
+}
+
+.buyClicker {
+  grid-area: buy-clicker;
+}
+
+.nextClicker {
+  grid-area: next-clicker;
+}
+
+.multiplier {
+  grid-area: multiplier;
+}
+
+.ownedMultis {
+  grid-area: owned-multis;
+}
+
+.buyMulti {
+  grid-area: buy-multi;
+}
+
+.nextMulti {
+  grid-area: next-multi;
+}
+
+.footer {
+  grid-area: footer;
+  padding: 50px 50px;
+}
+
+
